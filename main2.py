@@ -36,25 +36,25 @@ class Ball():
         self.y += self.dy
         if self.x <= MARGIN:
             self.x = MARGIN
-            self.x = .1
+            self.dx = self.dx * -10
 
             self.dx *= FRICTION
             self.dy *= FRICTION
         if self.x >= SCREEN_WIDTH - MARGIN:
             self.x = SCREEN_WIDTH - MARGIN
-            self.x = -.1
+            self.dx = self.dx * -10
 
             self.dx *= FRICTION
             self.dy *= FRICTION
         if self.y <= MARGIN:
             self.y = MARGIN
-            self.y = .1
+            self.dy = self.dy * -10
 
             self.dx *= FRICTION
             self.dy *= FRICTION
         if self.y >= SCREEN_HEIGHT - MARGIN:
             self.y = SCREEN_HEIGHT - MARGIN
-            self.y = .-1
+            self.dy = self.dy * -10
 
             self.dx *= FRICTION
             self.dy *= FRICTION
